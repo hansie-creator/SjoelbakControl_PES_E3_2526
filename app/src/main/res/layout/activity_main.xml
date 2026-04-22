@@ -1,0 +1,35 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="60dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Afstand s (m):" android:textStyle="bold" />
+        <EditText android:id="@+id/editS" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:inputType="numberDecimal" android:text="2.41" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Massa m (kg):" android:layout_marginTop="10dp" android:textStyle="bold" />
+        <EditText android:id="@+id/editM" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:inputType="numberDecimal" android:text="0.020" />
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Wrijving µk:" android:layout_marginTop="10dp" android:textStyle="bold" />
+        <EditText android:id="@+id/editW" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:inputType="numberDecimal" android:text="0.21" />
+
+        <Button android:id="@+id/btnSend" android:layout_width="match_parent"
+            android:layout_height="60dp" android:text="Verstuur naar ESP32" android:layout_marginTop="20dp" />
+
+        <TextView android:id="@+id/statusLabel" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Status: Losgekoppeld"
+            android:layout_marginTop="20dp" android:gravity="center" />
+    </LinearLayout>
+</ScrollView>
