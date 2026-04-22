@@ -1,14 +1,14 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="60dp"
+    android:padding="40dp"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_gravity="center">
+        android:layout_gravity="center_horizontal">
 
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
             android:text="Afstand s (m):" android:textStyle="bold" />
@@ -16,7 +16,7 @@
             android:layout_height="wrap_content" android:inputType="numberDecimal" android:text="2.41" />
 
         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:text="Massa m (kg):" android:layout_marginTop="10dp" android:textStyle="bold" />
+            android:text="Massa schijf m (kg):" android:layout_marginTop="10dp" android:textStyle="bold" />
         <EditText android:id="@+id/editM" android:layout_width="match_parent"
             android:layout_height="wrap_content" android:inputType="numberDecimal" android:text="0.020" />
 
@@ -25,11 +25,49 @@
         <EditText android:id="@+id/editW" android:layout_width="match_parent"
             android:layout_height="wrap_content" android:inputType="numberDecimal" android:text="0.21" />
 
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Wegduw afstand s_duw (m):" android:layout_marginTop="10dp" android:textStyle="bold" />
+        <EditText android:id="@+id/editSD" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:inputType="numberDecimal" android:text="0.40" />
+
         <Button android:id="@+id/btnSend" android:layout_width="match_parent"
             android:layout_height="60dp" android:text="Verstuur naar ESP32" android:layout_marginTop="20dp" />
 
         <TextView android:id="@+id/statusLabel" android:layout_width="match_parent"
             android:layout_height="wrap_content" android:text="Status: Losgekoppeld"
             android:layout_marginTop="20dp" android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Selecteer Vak Om In Te Schieten:"
+            android:textStyle="bold" 
+            android:layout_gravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="5"
+            android:layout_gravity="center_horizontal">
+
+            <Button android:id="@+id/btnVak1" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_margin="2dp" android:text="1" />
+
+            <Button android:id="@+id/btnVak2" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_margin="2dp" android:text="2" />
+
+            <Button android:id="@+id/btnVak3" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_margin="2dp" android:text="3" />
+
+            <Button android:id="@+id/btnVak4" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_margin="2dp" android:text="4" />
+
+            <Button android:id="@+id/btnVak5" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:layout_margin="2dp" android:text="5" />
+        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>
